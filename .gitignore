@@ -1,0 +1,5 @@
+Source/
+build_dev/
+build_sim/
+play_hello.pdx/
+*.sublime-workspace

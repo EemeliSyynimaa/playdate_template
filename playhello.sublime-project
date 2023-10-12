@@ -1,0 +1,48 @@
+{
+    "folders":
+    [
+        {
+            "path": ".",
+            "folder_exclude_patterns":
+            [
+                "build_dev",
+                "build_sim",
+                "play_hello.pdx"
+            ]
+        }
+    ],
+    "settings":
+    {
+        "rulers":
+        [
+            80
+        ],
+        "ClangFormat":
+        {
+            "languages": []
+        }
+    },
+     "build_systems":
+    [
+        {
+            "working_dir": "${project_path}/scripts",
+            "name": "build_debug",
+            "windows":
+            {
+                "shell_cmd": "build_debug",
+                "file_regex": "^(.+)\\((\\d+),(\\d+)\\): (.+$)",
+                "line_regex": "^(.+)\\((\\d+),(\\d+)\\).+$"
+            }
+        },
+        {
+            "working_dir": "${project_path}/scripts",
+            "name": "build_release",
+            "windows":
+            {
+                "shell_cmd": "build_release",
+                "file_regex": "^(.+)\\((\\d+),(\\d+)\\): (.+$)",
+                "line_regex": "^(.+)\\((\\d+),(\\d+)\\).+$"
+            }
+        }
+    ]
+}
